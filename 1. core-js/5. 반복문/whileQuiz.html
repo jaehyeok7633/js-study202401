@@ -22,18 +22,41 @@
         - while문을 if else 로 나눠서 두번 쓰는 것은 지양하겠습니다.
        */
 
-       var x = +prompt('첫 번째 정수를 입력하세요.');
+       /*var x = +prompt('첫 번째 정수를 입력하세요.');
        var y = +prompt('두 번째 정수를 입력하세요.');
-
        var sum = 0;
-       var cnt = x;
-       while(cnt <= y){
-        sum += cnt;
-        cnt++;
+       if(x > y){
+       var z = x;
+        x = y;
+        y = z;
+
+        console.log( +'부터'+  +'까지의 누적합계 :' + sum);
+       }
+       while(x <= y){
+        sum += x;
+        x++;
+       }
+    
+       console.log( +'부터'+  +'까지의 누적합계 :' + sum); */
+
+       var x = + prompt('첫 번째 정수를 입력하세요.');
+       var y = + prompt('두 번째 정수를 입력하세요.');
+
+       if(x > y){
+        var temp = y;
+        y = x;
+        x = temp;
        }
 
-       console.log(x + '부터' + y + '까지의 누적합계 :' + sum );
+       var total = 0;
+       var n = x;
 
+       while(x <= y){
+        total += x;
+        x++;
+       }
+
+       console.log(`${n}부터 ${y}까지의 누적합계: ${total}`);
 
       
   </script>
